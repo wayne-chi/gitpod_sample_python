@@ -1,3 +1,5 @@
+image:
+  file: .gitpod.dockerfile
 
 tasks:
   - name: Installation Task
@@ -10,6 +12,11 @@ tasks:
   - name: script
     init: gp sync-await pip-install  # wait for bb to finish
     command:  python test.py
+    
+  - name: mongodb
+    command: mkdir -p /workspace/data && mongod --dbpath /workspace/data
+
+
     
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
 ports:
