@@ -1,3 +1,6 @@
 pip
-psycopg2
+psycopg2==2.9.9
 cassandra-driver
+numpy
+pandas
+pymongo==4.8.0
