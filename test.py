@@ -6,3 +6,4 @@ except Exception as e:
     print("import failed")
 import os
 print(os.getenv('USER'))
+print('hi')
