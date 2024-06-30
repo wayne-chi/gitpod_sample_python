@@ -1,14 +1,14 @@
 
 tasks:
   - name: Installation Task
-    init: > 
-      bb install &&
-      pip install -r requirements.txt && # runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
-      gp sync-done bb
-    command: python test.py
+    init: |
+      pip install -r requirements.txt # runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
+      gp sync-done pip-install
+
+    
 
   - name: script
-    init: gp sync-await bb  # wait for bb to finish
+    init: gp sync-await pip-install  # wait for bb to finish
     command:  python test.py
     
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
