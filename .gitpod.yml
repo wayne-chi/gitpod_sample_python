@@ -15,6 +15,9 @@ tasks:
     command: mkdir -p /workspace/data && mongod --dbpath /workspace/data
 
   - name: mongo shell
+    init: |
+      curl -o shell.tgz https://downloads.mongodb.com/compass/mongosh-2.2.10-linux-x64.tgz
+      tar xvf shell.tgz
     command: export PATH=$PATH/workspace/gitpod_sample_python/mongosh-2.2.10-linux-x64/mongosh
 
 
