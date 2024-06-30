@@ -25,6 +25,9 @@ ports:
     port: 3000
     onOpen: open-browser
 
+  - name: dbpath
+    port: 27017
+
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
 vscode:
